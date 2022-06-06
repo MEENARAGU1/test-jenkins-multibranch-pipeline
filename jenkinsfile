@@ -6,10 +6,7 @@ pipeline {
 		stage('build') {
             steps {
                 echo 'build the job'
-				script {
-				def test = 2 + 3 > 4 ? 'true' : 'false'
-            }
-        }
+				}
 		stage('test') {
             steps {
                 echo 'test the job'
