@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+
+    stages {
+        
+		stage('build') {
+            steps {
+                echo 'build the job'
+				script {
+				def test = 2 + 3 > 4 ? 'true' : 'false'
+            }
+        }
+		stage('test') {
+            steps {
+                echo 'test the job'
+            }
+        }
+		stage('deploy') {
+            steps {
+                echo 'deploy the job'
+            }
+        }
+    }
+}
+
+}
